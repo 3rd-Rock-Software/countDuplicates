@@ -25,6 +25,7 @@ public class CountDuplicates {
             }
         }
         System.out.println("sorted by key:");
+        System.out.println();
         System.out.println(results);
         System.out.println();
         // System.out.println("sorted by value:");
