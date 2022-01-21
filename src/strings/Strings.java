@@ -9,6 +9,8 @@ public class Strings {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // System.out.println(getTextFile());
+        // System.exit(0);
         CountDuplicates duplicateCharacters = new CountDuplicates();
         duplicateCharacters.countDuplicates(getTextFile());
     }

@@ -28,15 +28,29 @@ public class CountDuplicates {
             }
         }
         System.out.println("sorted by key:");
-        System.out.println();
         System.out.println(results);
         System.out.println();
-        // System.out.println("sorted by value:");
-        // System.out.println(sortMapByValues(results));
+        System.out.println("sorted by value:");
+        System.out.println(sortMapByValues(results));
     }
 
-    // private Map sortMapByValues(Map<Character, Integer> results)
-    // {
-    // Map<Character, Integer> sortedMapByValues = new TreeMap<>(valueComparator);
-    // }
+    private String sortMapByValues(TreeMap<Character, Integer> results) {
+        Entry<Character, Integer> firstEntry = results.firstEntry();
+        int minValue = firstEntry.getValue();
+        int maxValue = firstEntry.getValue();
+        char minKey = firstEntry.getKey();
+        char maxKey = firstEntry.getKey();
+        for (Map.Entry<Character, Integer> entry : results.entrySet()) {
+            if (entry.getValue() < minValue) {
+                minValue = entry.getValue();
+                minKey = entry.getKey();
+            }
+            if (entry.getValue() > maxValue) {
+                maxValue = entry.getValue();
+                maxKey = entry.getKey();
+            }
+        }
+        return "The lowest used character is " + minKey + " with a value of " + minValue
+                + ".\nThe most used character is " + maxKey + " with a value of " + maxValue + ".";
+    }
 }
