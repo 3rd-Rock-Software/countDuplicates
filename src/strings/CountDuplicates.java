@@ -17,9 +17,24 @@ public class CountDuplicates {
      * otherwise add the character to the map with a value of 1
      */
 
+    private TreeMap<Character, Integer> results = new TreeMap<>();
+
+    /**
+     * @return the results
+     */
+    public TreeMap<Character, Integer> getResults() {
+        return results;
+    }
+
+    /**
+     * @param results the results to set
+     */
+    public void setResults(TreeMap<Character, Integer> results) {
+        this.results = results;
+    }
+
     public void countDuplicates(String str) {
         String lowerCase = str.toLowerCase();
-        TreeMap<Character, Integer> results = new TreeMap<>();
         for (char ch : lowerCase.toCharArray()) {
             if (results.containsKey(ch)) {
                 results.put(ch, results.get(ch) + 1);
