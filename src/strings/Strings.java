@@ -12,7 +12,9 @@ public class Strings {
         // System.out.println(getTextFile());
         // System.exit(0);
         CountDuplicates duplicateCharacters = new CountDuplicates();
-        duplicateCharacters.countDuplicates(getTextFile());
+        FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
+        // duplicateCharacters.countDuplicates(getTextFile());
+        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
     }
 
     private static String getTextFile() {

@@ -1,5 +1,6 @@
 package strings;
 
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 public class FirstNonrepeatedCharacter {
@@ -22,13 +23,25 @@ public class FirstNonrepeatedCharacter {
      * returned.
      */
     /*
-     * this solution uses the linkedHashMap
+     * this solution uses a single traversal
      */
     CountDuplicates cd = new CountDuplicates();
     TreeMap<Character, Integer> text = cd.getResults();
 
-    public void getFirstNonRepeatedCharacter() {
-        // TODO document why this method is empty
+    public void getFirstNonRepeatedCharacterV1() {
+        ArrayList<Character> singleCharacters = new ArrayList<>();
+        String testString = "abcdefg";
+        char firstCharacter = testString.charAt(0);
+        int index = 1;
+        for (int stringindex = index; stringindex < testString.length(); stringindex++) {
+            char stringCharacter = testString.charAt(index);
+            if (firstCharacter == stringCharacter) {
+                break;
+            } else {
+                singleCharacters.add(stringCharacter);
+            }
+        }
+        System.out.println("The first non repeated character in " + testString + " = " + singleCharacters.get(0));
     }
 
 }
