@@ -29,19 +29,24 @@ public class FirstNonrepeatedCharacter {
     TreeMap<Character, Integer> text = cd.getResults();
 
     public void getFirstNonRepeatedCharacterV1() {
+        // need a marker for the first character
+        // after each iteration through the string the marker needs to increment by 1
         ArrayList<Character> singleCharacters = new ArrayList<>();
-        String testString = "abcdefg";
-        char firstCharacter = testString.charAt(0);
-        int index = 1;
-        for (int stringindex = index; stringindex < testString.length(); stringindex++) {
-            char stringCharacter = testString.charAt(index);
-            if (firstCharacter == stringCharacter) {
-                break;
-            } else {
-                singleCharacters.add(stringCharacter);
+        String testString = "abbdef";
+        // the algorithm needs to get the first character of the string and check it
+        // against all the rest of the characters in the string.
+        // if the first character matches any character then increment check index abd
+        // add the character to a list
+        int checkIndex = 0;
+
+        for (int stringIndex = checkIndex + 1; stringIndex < testString.length(); stringIndex++) {
+            char checkCharacter = testString.charAt(checkIndex);
+            if (checkCharacter == testString.charAt(stringIndex)) {
+                System.out.println("found a match " + checkCharacter);
             }
         }
-        System.out.println("The first non repeated character in " + testString + " = " + singleCharacters.get(0));
+        System.out.println("test string is: " + testString);
+        System.out.println("single characters array is: " + singleCharacters);
     }
 
 }
