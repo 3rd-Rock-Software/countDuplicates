@@ -13,7 +13,7 @@ public class Strings {
         // System.exit(0);
         CountDuplicates duplicateCharacters = new CountDuplicates();
         FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
-        // duplicateCharacters.countDuplicates(getTextFile());
+        duplicateCharacters.countDuplicates(getTextFile());
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
     }

@@ -1,8 +1,7 @@
 package strings;
 
-import java.util.Map;
+import java.util.SortedMap;
 import java.util.TreeMap;
-import java.util.Map.Entry;
 
 public class CountDuplicates {
 
@@ -17,23 +16,23 @@ public class CountDuplicates {
      * otherwise add the character to the map with a value of 1
      */
 
-    private TreeMap<Character, Integer> results = new TreeMap<>();
+    private SortedMap<Character, Integer> results = new TreeMap<>();
 
     /**
      * @return the results
      */
-    public TreeMap<Character, Integer> getResults() {
+    public SortedMap<Character, Integer> getResults() {
         return results;
     }
 
     /**
      * @param results the results to set
      */
-    public void setResults(TreeMap<Character, Integer> results) {
+    public void setResults(SortedMap<Character, Integer> results) {
         this.results = results;
     }
 
-    public TreeMap<Character, Integer> countDuplicates(String str) {
+    public SortedMap<Character, Integer> countDuplicates(String str) {
         String lowerCase = str.toLowerCase();
         for (char ch : lowerCase.toCharArray()) {
             if (results.containsKey(ch)) {
@@ -51,23 +50,25 @@ public class CountDuplicates {
         // System.out.println(sortMapByValues(results));
     }
 
-    private String sortMapByValues(TreeMap<Character, Integer> results) {
-        Entry<Character, Integer> firstEntry = results.firstEntry();
-        int minValue = firstEntry.getValue();
-        int maxValue = firstEntry.getValue();
-        char minKey = firstEntry.getKey();
-        char maxKey = firstEntry.getKey();
-        for (Map.Entry<Character, Integer> entry : results.entrySet()) {
-            if (entry.getValue() < minValue) {
-                minValue = entry.getValue();
-                minKey = entry.getKey();
-            }
-            if (entry.getValue() > maxValue) {
-                maxValue = entry.getValue();
-                maxKey = entry.getKey();
-            }
-        }
-        return "The lowest used character is " + minKey + " with a value of " + minValue
-                + ".\nThe most used character is " + maxKey + " with a value of " + maxValue + ".";
-    }
+    // private String sortMapByValues(TreeMap<Character, Integer> results) {
+    // Entry<Character, Integer> firstEntry = results.firstEntry();
+    // int minValue = firstEntry.getValue();
+    // int maxValue = firstEntry.getValue();
+    // char minKey = firstEntry.getKey();
+    // char maxKey = firstEntry.getKey();
+    // for (Map.Entry<Character, Integer> entry : results.entrySet()) {
+    // if (entry.getValue() < minValue) {
+    // minValue = entry.getValue();
+    // minKey = entry.getKey();
+    // }
+    // if (entry.getValue() > maxValue) {
+    // maxValue = entry.getValue();
+    // maxKey = entry.getKey();
+    // }
+    // }
+    // return "The lowest used character is " + minKey + " with a value of " +
+    // minValue
+    // + ".\nThe most used character is " + maxKey + " with a value of " + maxValue
+    // + ".";
+    // }
 }

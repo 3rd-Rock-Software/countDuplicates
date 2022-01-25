@@ -1,8 +1,7 @@
 package strings;
 
-import java.util.ArrayList;
-import java.util.TreeMap;
 import java.util.Map.Entry;
+import java.util.SortedMap;
 
 public class FirstNonrepeatedCharacter {
     /*
@@ -55,7 +54,7 @@ public class FirstNonrepeatedCharacter {
         empty = true;
         System.out.println(
                 "Running first non repeated character V2\nThis counts all the characters in the string and returns the first character with a value of 1\n");
-        TreeMap<Character, Integer> results = cd.countDuplicates(testString);
+        SortedMap<Character, Integer> results = cd.countDuplicates(testString);
         for (Entry<Character, Integer> entry : results.entrySet()) {
             if (entry.getValue() == 1) {
                 System.out.println("The first non repeating character is " + entry.getKey() + "\n");
