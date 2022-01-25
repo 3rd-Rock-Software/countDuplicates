@@ -1,9 +1,18 @@
 package strings;
 
 import java.util.Map.Entry;
+import java.util.LinkedHashMap;
 import java.util.SortedMap;
 
 public class FirstNonrepeatedCharacter {
+    /**
+     *
+     */
+    private static final String nonDuplicateString = "There are no non duplicate characters!\n";
+    /**
+     *
+     */
+    private static final String outputLead = "The first non repeating character is ";
     /*
      * there are 3 solutions to this.
      * The first solution uses a single traversal approach. An array is populated
@@ -26,10 +35,11 @@ public class FirstNonrepeatedCharacter {
      * this solution uses a single traversal
      */
     private CountDuplicates cd = new CountDuplicates();
-    private String testString = "aabccddffgg";
-    private boolean empty = true;
+    private String testString = "aabbccdffgg";
+    private boolean nonDuplicate = true;
 
     public void getFirstNonRepeatedCharacterV1() {
+        System.out.println("The string is " + testString + "\n");
         System.out.println("Running first non repeated character V1\nThis uses a single traversal approach\n");
         // the algorithm checks to see if a character is repeated using "indexOf" and
         // "lastIndexOf"
@@ -37,13 +47,13 @@ public class FirstNonrepeatedCharacter {
         // if the end of the string is reached, there are no duplicate characters
         for (char i : testString.toCharArray()) {
             if (testString.indexOf(i) == testString.lastIndexOf(i)) {
-                System.out.println("The first non repeating character is " + i + "\n");
-                empty = false;
+                System.out.println(outputLead + i + "\n");
+                nonDuplicate = false;
                 break;
             }
         }
-        if (empty) {
-            System.out.println("There are no non duplicate characters!\n");
+        if (nonDuplicate) {
+            System.out.println(nonDuplicateString);
         }
     }
 
@@ -51,19 +61,48 @@ public class FirstNonrepeatedCharacter {
     // the same way as the countDuplicates class. the results can then be scanned
     // for the first character with a value of 1
     public void getFirstNonRepeatedCharacterV2() {
-        empty = true;
+        nonDuplicate = true;
         System.out.println(
                 "Running first non repeated character V2\nThis counts all the characters in the string and returns the first character with a value of 1\n");
         SortedMap<Character, Integer> results = cd.countDuplicates(testString);
         for (Entry<Character, Integer> entry : results.entrySet()) {
             if (entry.getValue() == 1) {
-                System.out.println("The first non repeating character is " + entry.getKey() + "\n");
-                empty = false;
+                System.out.println(outputLead + entry.getKey() + "\n");
+                nonDuplicate = false;
                 break;
             }
         }
-        if (empty) {
-            System.out.println("There are no non duplicate characters!\n");
+        if (nonDuplicate) {
+            System.out.println(nonDuplicateString);
+        }
+    }
+
+    public void getFirstNonRepeatedCharacterV3() {
+        System.out.println(
+                "Running first non repeating character V3.\nThis populates a linkedHashMap using characters as keys and Integers as values. It then just returns the first key with a value of 1.\n");
+        nonDuplicate = true;
+        // This method uses a linkedHashMap. This is an insertion order map so
+        // characters are added to the map in the order that they are found in the text.
+        // The count of each character is then incremented as they are found. It is then
+        // simply a matter of iterating the map and returning the first character with a
+        // value of 1
+        LinkedHashMap<Character, Integer> charCount = new LinkedHashMap<>();
+        for (char ch : testString.toCharArray()) {
+            if (charCount.containsKey(ch)) {
+                charCount.put(ch, charCount.get(ch) + 1);
+            } else {
+                charCount.put(ch, 1);
+            }
+        }
+        for (Entry<Character, Integer> entry : charCount.entrySet()) {
+            if (entry.getValue() == 1) {
+                System.out.println(outputLead + entry.getKey() + "\n");
+                nonDuplicate = false;
+                break;
+            }
+        }
+        if (nonDuplicate) {
+            System.out.println(nonDuplicateString);
         }
     }
 }
