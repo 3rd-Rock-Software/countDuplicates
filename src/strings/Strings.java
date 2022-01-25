@@ -15,9 +15,10 @@ public class Strings {
         FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
         // duplicateCharacters.countDuplicates(getTextFile());
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
+        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
     }
 
-    private static String getTextFile() {
+    public static String getTextFile() {
         StringBuilder text = new StringBuilder();
         File shakespeare = new File("C:\\newRepositories\\strings\\completeWorks.txt");
         Scanner scanner = null;

@@ -33,7 +33,7 @@ public class CountDuplicates {
         this.results = results;
     }
 
-    public void countDuplicates(String str) {
+    public TreeMap<Character, Integer> countDuplicates(String str) {
         String lowerCase = str.toLowerCase();
         for (char ch : lowerCase.toCharArray()) {
             if (results.containsKey(ch)) {
@@ -42,11 +42,13 @@ public class CountDuplicates {
                 results.put(ch, 1);
             }
         }
-        System.out.println("sorted by key:");
-        System.out.println(results);
-        System.out.println();
-        System.out.println("sorted by value:");
-        System.out.println(sortMapByValues(results));
+        return results;
+        // System.out.println("The string is :" + str);
+        // System.out.println("sorted by key:");
+        // System.out.println(results);
+        // System.out.println();
+        // System.out.println("sorted by value:");
+        // System.out.println(sortMapByValues(results));
     }
 
     private String sortMapByValues(TreeMap<Character, Integer> results) {

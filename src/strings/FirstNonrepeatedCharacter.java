@@ -2,6 +2,7 @@ package strings;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
+import java.util.Map.Entry;
 
 public class FirstNonrepeatedCharacter {
     /*
@@ -25,28 +26,41 @@ public class FirstNonrepeatedCharacter {
     /*
      * this solution uses a single traversal
      */
-    CountDuplicates cd = new CountDuplicates();
-    TreeMap<Character, Integer> text = cd.getResults();
+    private CountDuplicates cd = new CountDuplicates();
+    private String testString = "aabbccddeffggh";
 
     public void getFirstNonRepeatedCharacterV1() {
-        // need a marker for the first character
-        // after each iteration through the string the marker needs to increment by 1
-        ArrayList<Character> singleCharacters = new ArrayList<>();
-        String testString = "abbdef";
-        // the algorithm needs to get the first character of the string and check it
-        // against all the rest of the characters in the string.
-        // if the first character matches any character then increment check index abd
-        // add the character to a list
-        int checkIndex = 0;
-
-        for (int stringIndex = checkIndex + 1; stringIndex < testString.length(); stringIndex++) {
-            char checkCharacter = testString.charAt(checkIndex);
-            if (checkCharacter == testString.charAt(stringIndex)) {
-                System.out.println("found a match " + checkCharacter);
+        System.out.println("Running first non repeated character V1\n");
+        int counter = 0;
+        // the algorithm checks to see if a character is repeated using "indexOf" and
+        // "lastIndexOf"
+        // a counter is used to check the position in the string
+        // if the end of the string is reached, there are no duplicate characters
+        for (char i : testString.toCharArray()) {
+            counter++;
+            if (testString.indexOf(i) == testString.lastIndexOf(i)) {
+                System.out.println("The first non repeating character is " + i);
+                break;
+            } else {
+                if (counter == testString.length()) {
+                    System.out.println("There are no non duplicate characters!");
+                }
             }
         }
-        System.out.println("test string is: " + testString);
-        System.out.println("single characters array is: " + singleCharacters);
+    }
+
+    // this method loops the string and counts the occurence of each character in
+    // the same way as the countDuplicates class. the results can then be scanned
+    // for the first character with a value of 1
+    public void getFirstNonRepeatedCharacterV2() {
+        System.out.println("Running first non repeated character V2\n");
+        TreeMap<Character, Integer> results = cd.countDuplicates(testString);
+        for (Entry<Character, Integer> entry : results.entrySet()) {
+            if (entry.getValue() == 1) {
+                System.out.println("The first non repeating character is " + entry.getKey());
+                break;
+            }
+        }
     }
 
 }
