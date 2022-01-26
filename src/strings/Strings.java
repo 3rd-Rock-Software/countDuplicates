@@ -16,6 +16,7 @@ public class Strings {
         duplicateCharacters.countDuplicates(getTextFile());
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
+        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
     }
 
     public static String getTextFile() {
