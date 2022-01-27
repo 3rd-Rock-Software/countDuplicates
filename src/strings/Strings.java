@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Strings {
+    private static String str = "It's the end of the world as we know it.";
+
     /**
      * @param args the command line arguments
      */
@@ -18,8 +20,8 @@ public class Strings {
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
-        reverseWords.reverseLetters("It's the end of the world as we know it.");
-        CHECK GITHUB
+        reverseWords.reverseLetters(str);
+        reverseWords.reverseWords(reverseWords.reverseLetters(str));
     }
 
     public static String getTextFile() {
