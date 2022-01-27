@@ -13,10 +13,13 @@ public class Strings {
         // System.exit(0);
         CountDuplicates duplicateCharacters = new CountDuplicates();
         FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
+        ReverseWords reverseWords = new ReverseWords();
         duplicateCharacters.countDuplicates(getTextFile());
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
+        reverseWords.reverseLetters("It's the end of the world as we know it.");
+        CHECK GITHUB
     }
 
     public static String getTextFile() {
