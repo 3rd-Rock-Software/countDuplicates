@@ -40,7 +40,7 @@ public class FirstNonrepeatedCharacter {
 
     public void getFirstNonRepeatedCharacterV1() {
         System.out.println("The string is " + testString + "\n");
-        System.out.println("Running first non repeated character V1\nThis uses a single traversal approach\n");
+
         // the algorithm checks to see if a character is repeated using "indexOf" and
         // "lastIndexOf"
         // a counter is used to check the position in the string
@@ -62,8 +62,7 @@ public class FirstNonrepeatedCharacter {
     // for the first character with a value of 1
     public void getFirstNonRepeatedCharacterV2() {
         nonDuplicate = true;
-        System.out.println(
-                "Running first non repeated character V2\nThis counts all the characters in the string and returns the first character with a value of 1\n");
+
         SortedMap<Character, Integer> results = cd.countDuplicates(testString);
         for (Entry<Character, Integer> entry : results.entrySet()) {
             if (entry.getValue() == 1) {
@@ -78,8 +77,7 @@ public class FirstNonrepeatedCharacter {
     }
 
     public void getFirstNonRepeatedCharacterV3() {
-        System.out.println(
-                "Running first non repeating character V3.\nThis populates a linkedHashMap using characters as keys and Integers as values. It then just returns the first key with a value of 1.\n");
+
         nonDuplicate = true;
         // This method uses a linkedHashMap. This is an insertion order map so
         // characters are added to the map in the order that they are found in the text.

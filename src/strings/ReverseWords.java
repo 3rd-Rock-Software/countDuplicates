@@ -9,10 +9,11 @@ public class ReverseWords {
     // result is then appended to stringBuilder
 
     private final String whitespace = " ";
+    private String[] words;
 
-    public StringBuilder reverseLetters(String str) {
-        System.out.println("Running reverse letters\n");
-        String[] words = str.split(whitespace);
+    public StringBuilder reversedLetters(String str) {
+
+        words = str.split(whitespace);
         StringBuilder reversedString = new StringBuilder();
         for (String word : words) {
             StringBuilder reversedWord = new StringBuilder();
@@ -26,10 +27,17 @@ public class ReverseWords {
     }// To reverse the words as well as the letters of each word it is simply a case
      // of calling StringBuilder.reverse()
 
-    public void reverseWords(StringBuilder str) {
+    public void reverseWords(String str) {
         System.out.println("Running reverse words\n");
-        System.out.println(str.reverse());
-        // I think this is reversing the reversed words. The output is words in reverse
-        // order but the letters are in the correct order
+        String reversedString = new StringBuilder(str).reverse().toString();
+        System.out.println(reversedString + "\n");
+        System.out.println("What about reversing the words without reversing the letters\n");
+        System.out.println("The original string is : " + str);
+        StringBuilder reversedSentence = new StringBuilder();
+        words = str.split(whitespace);
+        for (int index = words.length - 1; index >= 0; index--) {
+            reversedSentence.append(words[index]).append(whitespace);
+        }
+        System.out.println(reversedSentence);
     }
 }

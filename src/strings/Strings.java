@@ -17,11 +17,17 @@ public class Strings {
         FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
         ReverseWords reverseWords = new ReverseWords();
         duplicateCharacters.countDuplicates(getTextFile());
+        System.out.println("Running first non repeated character V1\nThis uses a single traversal approach\n");
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
+        System.out.println(
+                "Running first non repeated character V2\nThis counts all the characters in the string and returns the first character with a value of 1\n");
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
+        System.out.println(
+                "Running first non repeating character V3.\nThis populates a linkedHashMap using characters as keys and Integers as values. It then just returns the first key with a value of 1.\n");
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
-        reverseWords.reverseLetters(str);
-        reverseWords.reverseWords(reverseWords.reverseLetters(str));
+        System.out.println("Running reverse letters\n");
+        reverseWords.reversedLetters(str);
+        reverseWords.reverseWords(str);
     }
 
     public static String getTextFile() {
