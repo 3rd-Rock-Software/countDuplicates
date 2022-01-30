@@ -1,5 +1,8 @@
 package strings;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.temporal.TemporalAmount;
 import java.util.SortedMap;
 import java.util.TreeMap;
 

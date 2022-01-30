@@ -1,6 +1,9 @@
 package strings;
 
 import java.util.Map.Entry;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.SortedMap;
 
@@ -41,13 +44,14 @@ public class FirstNonrepeatedCharacter {
     public void getFirstNonRepeatedCharacterV1() {
         System.out.println("The string is " + testString + "\n");
         System.out.println("Running first non repeated character V1\nThis uses a single traversal approach");
+        LocalDateTime startTime = LocalDateTime.now();
         // the algorithm checks to see if a character is repeated using "indexOf" and
         // "lastIndexOf"
         // a counter is used to check the position in the string
         // if the end of the string is reached, there are no duplicate characters
         for (char i : testString.toCharArray()) {
             if (testString.indexOf(i) == testString.lastIndexOf(i)) {
-                System.out.println(outputLead + i + "\n");
+                System.out.println(outputLead + i);
                 nonDuplicate = false;
                 break;
             }
@@ -55,19 +59,22 @@ public class FirstNonrepeatedCharacter {
         if (nonDuplicate) {
             System.out.println(nonDuplicateString);
         }
+        LocalDateTime endTime = LocalDateTime.now();
+        System.out.println("The method took " + Duration.between(startTime, endTime) + "\n");
     }
 
     // this method loops the string and counts the occurence of each character in
     // the same way as the countDuplicates class. the results can then be scanned
     // for the first character with a value of 1
     public void getFirstNonRepeatedCharacterV2() {
+        LocalDateTime startTime = LocalDateTime.now();
         nonDuplicate = true;
         System.out.println(
-                "Running first non repeated character V2\nThis counts all the characters in the string and returns the first character with a value of 1\n");
+                "Running first non repeated character V2\nThis counts all the characters in the string and returns the first character with a value of 1");
         SortedMap<Character, Integer> results = cd.countDuplicates(testString);
         for (Entry<Character, Integer> entry : results.entrySet()) {
             if (entry.getValue() == 1) {
-                System.out.println(outputLead + entry.getKey() + "\n");
+                System.out.println(outputLead + entry.getKey());
                 nonDuplicate = false;
                 break;
             }
@@ -75,6 +82,8 @@ public class FirstNonrepeatedCharacter {
         if (nonDuplicate) {
             System.out.println(nonDuplicateString);
         }
+        LocalDateTime endTime = LocalDateTime.now();
+        System.out.println("The method took : " + Duration.between(startTime, endTime) + "\n");
     }
 
     public void getFirstNonRepeatedCharacterV3() {

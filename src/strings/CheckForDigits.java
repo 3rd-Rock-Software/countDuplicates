@@ -5,10 +5,10 @@ import java.util.Set;
 
 public class CheckForDigits {
 
-    public void checkIfOnlyDigits() {
+    public void checkIfOnlyDigits(String characters) {
         System.out.println("Running check if only characters.");
         boolean onlyDigits = false;
-        String characters = "jnoib";
+        // String characters1 = "jnoib ";
         Set<Character> numbers = new HashSet<>();
         Set<Character> letters = new HashSet<>();
         for (char ch : characters.toCharArray()) {

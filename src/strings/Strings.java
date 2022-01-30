@@ -23,7 +23,8 @@ public class Strings {
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
         reverseWords.reversedLetters(str);
         reverseWords.reverseWords(str);
-        digits.checkIfOnlyDigits();
+        digits.checkIfOnlyDigits(getTextFile());
+        digits.checkIfOnlyDigits(str);
     }
 
     public static String getTextFile() {
