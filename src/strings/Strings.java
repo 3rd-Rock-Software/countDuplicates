@@ -17,6 +17,7 @@ public class Strings {
         FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
         ReverseWords reverseWords = new ReverseWords();
         CheckForDigits digits = new CheckForDigits();
+        CountingVowelsAndConsonants cvlc = new CountingVowelsAndConsonants();
         duplicateCharacters.countDuplicates(getTextFile());
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
@@ -25,6 +26,7 @@ public class Strings {
         reverseWords.reverseWords(str);
         digits.checkIfOnlyDigits(getTextFile());
         digits.checkIfOnlyDigits(str);
+        cvlc.count(str);
     }
 
     public static String getTextFile() {

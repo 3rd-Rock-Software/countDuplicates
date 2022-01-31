@@ -1,10 +1,9 @@
 package strings;
 
-import java.util.Map.Entry;
 import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
+import java.util.Map.Entry;
 import java.util.SortedMap;
 
 public class FirstNonrepeatedCharacter {
