@@ -13,19 +13,20 @@ public class Strings {
     public static void main(String[] args) {
         // System.out.println(getTextFile());
         // System.exit(0);
-        CountDuplicates duplicateCharacters = new CountDuplicates();
-        FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
-        ReverseWords reverseWords = new ReverseWords();
-        CheckForDigits digits = new CheckForDigits();
+        // CountDuplicates duplicateCharacters = new CountDuplicates();
+        // FirstNonrepeatedCharacter firstNonrepeatedCharacter = new
+        // FirstNonrepeatedCharacter();
+        // ReverseWords reverseWords = new ReverseWords();
+        // CheckForDigits digits = new CheckForDigits();
         CountingVowelsAndConsonants cvlc = new CountingVowelsAndConsonants();
-        duplicateCharacters.countDuplicates(getTextFile());
-        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
-        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
-        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
-        reverseWords.reversedLetters(str);
-        reverseWords.reverseWords(str);
-        digits.checkIfOnlyDigits(getTextFile());
-        digits.checkIfOnlyDigits(str);
+        // duplicateCharacters.countDuplicates(getTextFile());
+        // firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
+        // firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
+        // firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
+        // reverseWords.reversedLetters(str);
+        // reverseWords.reverseWords(str);
+        // digits.checkIfOnlyDigits(getTextFile());
+        // digits.checkIfOnlyDigits(str);
         cvlc.count(str);
     }
 
