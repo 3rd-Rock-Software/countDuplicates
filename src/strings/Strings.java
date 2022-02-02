@@ -11,23 +11,22 @@ public class Strings {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // System.out.println(getTextFile());
-        // System.exit(0);
-        // CountDuplicates duplicateCharacters = new CountDuplicates();
-        // FirstNonrepeatedCharacter firstNonrepeatedCharacter = new
-        // FirstNonrepeatedCharacter();
-        // ReverseWords reverseWords = new ReverseWords();
-        // CheckForDigits digits = new CheckForDigits();
-        CountingVowelsAndConsonants cvlc = new CountingVowelsAndConsonants();
-        // duplicateCharacters.countDuplicates(getTextFile());
-        // firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
-        // firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
-        // firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
-        // reverseWords.reversedLetters(str);
-        // reverseWords.reverseWords(str);
-        // digits.checkIfOnlyDigits(getTextFile());
-        // digits.checkIfOnlyDigits(str);
-        cvlc.count(str);
+        CountDuplicates duplicateCharacters = new CountDuplicates();
+        FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
+        ReverseWords reverseWords = new ReverseWords();
+        CheckForDigits digits = new CheckForDigits();
+        Count count = new Count();
+        duplicateCharacters.countDuplicates(getTextFile());
+        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
+        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
+        firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
+        reverseWords.reversedLetters(str);
+        reverseWords.reverseWords(str);
+        digits.checkIfOnlyDigits(getTextFile());
+        digits.checkIfOnlyDigits(str);
+        count.countVowelsAndConsonants(str);
+        // count.countOccurencesV1(getTextFile(), 'a');
+        count.countOccurencesV1("erkgnergnalerknbaeo;hbajnb;ob", 'a');
     }
 
     public static String getTextFile() {
