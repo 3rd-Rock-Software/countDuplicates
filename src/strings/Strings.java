@@ -26,7 +26,8 @@ public class Strings {
         digits.checkIfOnlyDigits(str);
         count.countVowelsAndConsonants(str);
         // count.countOccurencesV1(getTextFile(), 'a');
-        count.countOccurencesV1("erkgnergnalerknbaeo;hbajnb;ob", 'a');
+        count.countOccurencesV1("abcdefghijklmnopqrstuvwxyz", 'a');
+        count.countOccurencesV2("abcdefghijklmnopqrstuvwxyz", 'a');
     }
 
     public static String getTextFile() {
