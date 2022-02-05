@@ -18,6 +18,7 @@ public class Strings {
         Count count = new Count();
         RemoveWhiteSpace rmw = new RemoveWhiteSpace();
         Join join = new Join();
+        Permutations perms = new Permutations();
         duplicateCharacters.countDuplicates(getTextFile());
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
@@ -33,6 +34,7 @@ public class Strings {
         count.countOccurencesV2("abcdefghijklmnopqrstuvwxyz", 'a');
         rmw.whitespace(str);
         join.joinByDelimiter(' ', "How", "are", "you");
+        perms.permuteAndPrint("abcd");
     }
 
     public static String getTextFile() {
