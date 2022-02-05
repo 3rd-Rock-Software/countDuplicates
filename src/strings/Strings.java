@@ -17,6 +17,7 @@ public class Strings {
         CheckForDigits digits = new CheckForDigits();
         Count count = new Count();
         RemoveWhiteSpace rmw = new RemoveWhiteSpace();
+        Join join = new Join();
         duplicateCharacters.countDuplicates(getTextFile());
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
@@ -31,6 +32,7 @@ public class Strings {
         count.countOccurencesV1("abcdefghijklmnopqrstuvwxyz", 'a');
         count.countOccurencesV2("abcdefghijklmnopqrstuvwxyz", 'a');
         rmw.whitespace(str);
+        join.joinByDelimiter(' ', "How", "are", "you");
     }
 
     public static String getTextFile() {
