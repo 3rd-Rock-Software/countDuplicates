@@ -12,7 +12,7 @@ public class Count {
     // vowel, then check it is between a - z.
     public void countVowelsAndConsonants(String str) {
         System.out.println("Running count.");
-        System.out.println("The string is : " + str);
+        // System.out.println("The string is : " + str);
         int vowelCount = 0;
         int consonantCount = 0;
         str = str.toLowerCase();
@@ -44,6 +44,7 @@ public class Count {
     // The second involves using a single traversal of the string and counting each
     // occurence of the 'char' specified
     public void countOccurencesV1(String str, char ch) {
+        // CAUTION. This method does not work with long strings.
         LocalDateTime start = LocalDateTime.now();
         System.out.println("Running count occurrences V1");
         int originalSize = str.length();
@@ -56,9 +57,9 @@ public class Count {
         int newSize = newString.length();
         int difference = originalSize - newSize;
         if (difference == 1) {
-            System.out.println("There is " + difference + " occurrence of " + ch + " in the string " + str);
+            System.out.println("There is " + difference + " occurrence of " + ch);// + " in the string " + str);
         } else {
-            System.out.println("There are " + difference + " occurrences of " + ch + " in the string " + str);
+            System.out.println("There are " + difference + " occurrences of " + ch); // + " in the string " + str);
         }
         LocalDateTime end = LocalDateTime.now();
         System.out.println("Time taken = " + (Duration.between(start, end)) + "\n");
@@ -76,10 +77,12 @@ public class Count {
         }
         LocalDateTime endTime = LocalDateTime.now();
         if (count == 1) {
-            System.out.println("There is " + count + " occurrence of " + ch + " in the string " + str);
+            System.out
+                    .println("There is " + count + " occurrence of " + ch + " in the string " + str);
         } else {
-            System.out.println("There are " + count + " occurrences of " + ch + " in the string " + str);
+            System.out.println(
+                    "There are " + count + " occurrences of " + ch + " in the string " + str);
         }
-        System.out.println("Time taken = " + Duration.between(startTime, endTime));
+        System.out.println("Time taken = " + Duration.between(startTime, endTime) + "\n");
     }
 }

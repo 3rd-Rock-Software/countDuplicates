@@ -16,6 +16,7 @@ public class Strings {
         ReverseWords reverseWords = new ReverseWords();
         CheckForDigits digits = new CheckForDigits();
         Count count = new Count();
+        RemoveWhiteSpace rmw = new RemoveWhiteSpace();
         duplicateCharacters.countDuplicates(getTextFile());
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
@@ -25,9 +26,11 @@ public class Strings {
         digits.checkIfOnlyDigits(getTextFile());
         digits.checkIfOnlyDigits(str);
         count.countVowelsAndConsonants(str);
-        // count.countOccurencesV1(getTextFile(), 'a');
+        // count.countOccurencesV2(getTextFile(), 'a');
+        // System.exit(0);
         count.countOccurencesV1("abcdefghijklmnopqrstuvwxyz", 'a');
         count.countOccurencesV2("abcdefghijklmnopqrstuvwxyz", 'a');
+        rmw.whitespace(str);
     }
 
     public static String getTextFile() {
