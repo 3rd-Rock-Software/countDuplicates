@@ -11,7 +11,7 @@ public class Permutations {
         LocalDateTime start = LocalDateTime.now();
         permuteAndPrint("", str);
         LocalDateTime end = LocalDateTime.now();
-        System.out.println("\nTime taken = " + Duration.between(start, end));
+        System.out.println("\nTime taken = " + Duration.between(start, end) + "\n");
     }
 
     private void permuteAndPrint(String prefix, String str) {

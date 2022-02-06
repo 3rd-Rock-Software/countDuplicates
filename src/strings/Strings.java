@@ -37,6 +37,8 @@ public class Strings {
         Palindrome palindrome = new Palindrome();
         palindrome.isPalindromeV1("abcdefgfedcba");
         palindrome.isPalindromeV1("abcdefghijklm");
+        palindrome.isPalindromeV2("abcdefgfedcba");
+        palindrome.isPalindromeV2("abcdefghijklm");
     }
 
     public static String getTextFile() {
