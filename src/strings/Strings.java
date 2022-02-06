@@ -12,29 +12,31 @@ public class Strings {
      */
     public static void main(String[] args) {
         CountDuplicates duplicateCharacters = new CountDuplicates();
-        FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
-        ReverseWords reverseWords = new ReverseWords();
-        CheckForDigits digits = new CheckForDigits();
-        Count count = new Count();
-        RemoveWhiteSpace rmw = new RemoveWhiteSpace();
-        Join join = new Join();
-        Permutations perms = new Permutations();
         duplicateCharacters.countDuplicates(getTextFile());
+        FirstNonrepeatedCharacter firstNonrepeatedCharacter = new FirstNonrepeatedCharacter();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV1();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV2();
         firstNonrepeatedCharacter.getFirstNonRepeatedCharacterV3();
+        ReverseWords reverseWords = new ReverseWords();
         reverseWords.reversedLetters(str);
         reverseWords.reverseWords(str);
+        CheckForDigits digits = new CheckForDigits();
         digits.checkIfOnlyDigits(getTextFile());
         digits.checkIfOnlyDigits(str);
+        Count count = new Count();
         count.countVowelsAndConsonants(str);
         // count.countOccurencesV2(getTextFile(), 'a');
-        // System.exit(0);
         count.countOccurencesV1("abcdefghijklmnopqrstuvwxyz", 'a');
         count.countOccurencesV2("abcdefghijklmnopqrstuvwxyz", 'a');
+        RemoveWhiteSpace rmw = new RemoveWhiteSpace();
         rmw.whitespace(str);
+        Join join = new Join();
         join.joinByDelimiter(' ', "How", "are", "you");
-        perms.permuteAndPrint("abcd");
+        Permutations perms = new Permutations();
+        perms.permuteAndPrint("abcd"); // BEWARE this is n!
+        Palindrome palindrome = new Palindrome();
+        palindrome.isPalindromeV1("abcdefgfedcba");
+        palindrome.isPalindromeV1("abcdefghijklm");
     }
 
     public static String getTextFile() {
