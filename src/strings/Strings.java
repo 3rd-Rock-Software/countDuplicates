@@ -39,6 +39,11 @@ public class Strings {
         palindrome.isPalindromeV1("abcdefghijklm");
         palindrome.isPalindromeV2("abcdefgfedcba");
         palindrome.isPalindromeV2("abcdefghijklm");
+        RemoveDuplicates rd = new RemoveDuplicates();
+        rd.removeDuplicates("abcdefghiabcd");
+        rd.removeDuplicates("aaabbbcccdddeeffgghhii");
+        rd.removeDuplicates(str);
+        // rd.removeDuplicates(getTextFile());
     }
 
     public static String getTextFile() {

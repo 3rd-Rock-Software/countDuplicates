@@ -18,9 +18,9 @@ public class Palindrome {
             right--;
         }
         if (!palindrome) {
-            System.out.println("The string " + str + " is not a palindrome");
+            System.out.println("The string " + str + " is not a palindrome\n");
         } else {
-            System.out.println("The string " + str + " is a palindrome");
+            System.out.println("The string " + str + " is a palindrome\n");
 
         }
         // System.out.println("\n");
@@ -35,9 +35,9 @@ public class Palindrome {
             isPalindrome = false;
         }
         if (isPalindrome) {
-            System.out.println("The string " + str + " is a palindrome");
+            System.out.println("The string " + str + " is a palindrome\n");
         } else {
-            System.out.println("The string " + str + " is not a palindrome");
+            System.out.println("The string " + str + " is not a palindrome\n");
         }
         // System.out.println("\n");
     }
