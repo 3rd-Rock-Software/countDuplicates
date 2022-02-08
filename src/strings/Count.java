@@ -37,13 +37,12 @@ public class Count {
             System.out.println("There are " + consonantCount + " consonants.\n");
         }
     }
-    // There are two easy ways to solve this. The first involves replacing all
-    // occurences of the 'char' with "" and then subtracting the length of the new
-    // string from the length of the original string.
+    // There are two easy ways to solve this.
 
-    // The second involves using a single traversal of the string and counting each
-    // occurence of the 'char' specified
     public void countOccurencesV1(String str, char ch) {
+        // The first involves replacing all
+        // occurences of the 'char' with "" and then subtracting the length of the new
+        // string from the length of the original string.
         // CAUTION. This method does not work with long strings.
         LocalDateTime start = LocalDateTime.now();
         System.out.println("Running count occurrences V1");
@@ -67,6 +66,8 @@ public class Count {
     }
 
     public void countOccurencesV2(String str, char ch) {
+        // The second involves using a single traversal of the string and counting each
+        // occurence of the 'char' specified
         System.out.println("Running count occurrences V2");
         LocalDateTime startTime = LocalDateTime.now();
         int count = 0;
@@ -78,10 +79,10 @@ public class Count {
         LocalDateTime endTime = LocalDateTime.now();
         if (count == 1) {
             System.out
-                    .println("There is " + count + " occurrence of " + ch + " in the string " + str);
+                    .println("There is " + count + " occurrence of " + ch + " in the string ");
         } else {
             System.out.println(
-                    "There are " + count + " occurrences of " + ch + " in the string " + str);
+                    "There are " + count + " occurrences of " + ch + " in the string ");
         }
         System.out.println("Time taken = " + Duration.between(startTime, endTime) + "\n");
     }

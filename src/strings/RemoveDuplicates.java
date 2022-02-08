@@ -13,18 +13,12 @@ public class RemoveDuplicates {
         // is not present in the stringbuilder.)
         char[] chArray = str.toCharArray();
         StringBuilder individuals = new StringBuilder();
-        StringBuilder duplicates = new StringBuilder();
         for (char ch : chArray) {
             if (individuals.indexOf(String.valueOf(ch)) == -1) {
                 individuals.append(ch);
             }
-            // if (individuals.indexOf(String.valueOf(ch)) != -1) {
-            // duplicates.append(ch);
-            // }
-
         }
-        System.out.println("The string without duplicates is : " + individuals.toString());
-        System.out.println("The duplicates are : " + duplicates.toString());
+        System.out.println("The string without duplicates is : " + individuals.toString() + "\n");
     }
 
 }

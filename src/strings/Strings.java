@@ -22,10 +22,11 @@ public class Strings {
         reverseWords.reverseWords(str);
         CheckForDigits digits = new CheckForDigits();
         digits.checkIfOnlyDigits(getTextFile());
-        digits.checkIfOnlyDigits(str);
+        digits.checkIfOnlyDigits("1234");
+        digits.checkIfOnlyDigits("1234abcd");
         Count count = new Count();
         count.countVowelsAndConsonants(str);
-        // count.countOccurencesV2(getTextFile(), 'a');
+        count.countOccurencesV2(getTextFile(), 'a');
         count.countOccurencesV1("abcdefghijklmnopqrstuvwxyz", 'a');
         count.countOccurencesV2("abcdefghijklmnopqrstuvwxyz", 'a');
         RemoveWhiteSpace rmw = new RemoveWhiteSpace();
@@ -40,10 +41,13 @@ public class Strings {
         palindrome.isPalindromeV2("abcdefgfedcba");
         palindrome.isPalindromeV2("abcdefghijklm");
         RemoveDuplicates rd = new RemoveDuplicates();
-        rd.removeDuplicates("abcdefghiabcd");
-        rd.removeDuplicates("aaabbbcccdddeeffgghhii");
-        rd.removeDuplicates(str);
-        // rd.removeDuplicates(getTextFile());
+        rd.removeDuplicates("abcdefghiabcdxxyyz");
+        rd.removeDuplicates(getTextFile());
+        RemoveAgivenCharacter ragc = new RemoveAgivenCharacter();
+        ragc.removeCharacterV1(str, 'd');
+        ragc.removeCharacterV1(str, 'e');
+        ragc.removeCharacterV2(str, 'd');
+        ragc.removeCharacterV2(str, 'e');
     }
 
     public static String getTextFile() {
