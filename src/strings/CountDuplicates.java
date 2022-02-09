@@ -4,7 +4,6 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 public class CountDuplicates {
-
     /*
      * iterate the characters of a string and store them in a map
      * 
@@ -33,6 +32,7 @@ public class CountDuplicates {
     }
 
     public SortedMap<Character, Integer> countDuplicates(String str) {
+        System.out.println("Running count duplicates");
         String lowerCase = str.toLowerCase();
         for (char ch : lowerCase.toCharArray()) {
             if (results.containsKey(ch)) {
@@ -41,6 +41,7 @@ public class CountDuplicates {
                 results.put(ch, 1);
             }
         }
+        System.out.println(results + "\n");
         return results;
     }
 }

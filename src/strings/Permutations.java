@@ -12,6 +12,7 @@ public class Permutations {
         permuteAndPrint("", str);
         LocalDateTime end = LocalDateTime.now();
         System.out.println("\nTime taken = " + Duration.between(start, end) + "\n");
+        count = 1;
     }
 
     private void permuteAndPrint(String prefix, String str) {

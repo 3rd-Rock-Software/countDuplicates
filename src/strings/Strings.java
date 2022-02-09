@@ -34,7 +34,10 @@ public class Strings {
         Join join = new Join();
         join.joinByDelimiter(' ', "How", "are", "you");
         Permutations perms = new Permutations();
+        perms.permuteAndPrint("ab"); // BEWARE this is n!
+        perms.permuteAndPrint("abc"); // BEWARE this is n!
         perms.permuteAndPrint("abcd"); // BEWARE this is n!
+        perms.permuteAndPrint("123"); // BEWARE this is n!
         Palindrome palindrome = new Palindrome();
         palindrome.isPalindromeV1("abcdefgfedcba");
         palindrome.isPalindromeV1("abcdefghijklm");
@@ -48,6 +51,8 @@ public class Strings {
         ragc.removeCharacterV1(str, 'e');
         ragc.removeCharacterV2(str, 'd');
         ragc.removeCharacterV2(str, 'e');
+        MostAppearances ma = new MostAppearances();
+        ma.findMostUsedcharacter(getTextFile());
     }
 
     public static String getTextFile() {

@@ -41,8 +41,9 @@ public class FirstNonrepeatedCharacter {
     private boolean nonDuplicate = true;
 
     public void getFirstNonRepeatedCharacterV1() {
-        System.out.println("The string is " + testString + "\n");
+
         System.out.println("Running first non repeated character V1\nThis uses a single traversal approach");
+        System.out.println("The string is " + testString);
         LocalDateTime startTime = LocalDateTime.now();
         // the algorithm checks to see if a character is repeated using "indexOf" and
         // "lastIndexOf"

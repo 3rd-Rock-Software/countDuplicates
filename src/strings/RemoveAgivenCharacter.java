@@ -1,6 +1,5 @@
 package strings;
 
-import java.lang.String;
 import java.util.regex.Pattern;
 
 public class RemoveAgivenCharacter {
