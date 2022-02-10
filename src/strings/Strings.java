@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Strings {
     private static String str = "It's the end of the world as we know it.";
+    private static String[] strArray = { "delta", "bravo", "alpha", "echo", "charlie", "golf", "foxtrot" };
 
     /**
      * @param args the command line arguments
@@ -53,6 +54,9 @@ public class Strings {
         ragc.removeCharacterV2(str, 'e');
         MostAppearances ma = new MostAppearances();
         ma.findMostUsedcharacter(getTextFile());
+        SortStringArray ssa = new SortStringArray();
+        ssa.sortArraysAlphabetically(strArray);
+        ssa.sortArraysByStringLength(strArray);
     }
 
     public static String getTextFile() {
